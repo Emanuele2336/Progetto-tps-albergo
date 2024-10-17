@@ -14,4 +14,4 @@ const filltable=()=>{
 }
 filltable();
 table.viewtable();
-table.render();
+table.render();//ciao

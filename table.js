@@ -22,6 +22,6 @@ const createTable = (parentElement) => {
         console.log(data);
       }
     }
-  }
+  }//ciao
   
   
