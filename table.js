@@ -20,6 +20,15 @@ const createTable = (parentElement) => {
       },
       viewtable: ()=>{
         console.log(data);
+      },
+      modifyRow: (date,modifica) =>{
+        for (let i =0 ; i<data.length;i++){
+          if(date===data[i][0]){
+            let temp=[];
+            temp = [date,modifica[0],modifica[1],modifica[2]];
+            data[i]=temp;
+          }
+        }
       }
     }
   }//ciao
