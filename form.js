@@ -1,15 +1,6 @@
 const createForm = (parentElement) => {
     let data;
     let callback = null;
-  ///modifica
-    let reservation={
-      data://data prenotazione,
-      camera:{
-        "singola": 10,
-  "doppia": 5,
-  "suite": 3
-      }
-    }
     return {  
       setLabels: (labels) => { data = labels; },  
       onsubmit: (callbackInput) => { callback = callbackInput},
