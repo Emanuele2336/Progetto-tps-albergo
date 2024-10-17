@@ -5,9 +5,6 @@ const createTable = (parentElement) => {
         data = dataInput;
       },
       //modifica
-      add: (reservation)=> {
-//conntrollo per vedere se la prenotazione è valida
-      },
       render: () => {
         let htmlTable = "<table>";
         htmlTable += data.map((row) => 
@@ -17,6 +14,9 @@ const createTable = (parentElement) => {
         ).join("") + "</tr>";
         htmlTable += "</table";
         parentElement.innerHTML = htmlTable;
+      },
+      addRow: (dataInput)=>{
+        data.push(dataInput);
       }
     }
   }
