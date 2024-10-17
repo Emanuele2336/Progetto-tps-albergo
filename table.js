@@ -21,6 +21,7 @@ const createTable = (parentElement) => {
       viewtable: ()=>{
         console.log(data);
       },
+      //modifica corrisponde ad un array di 3 elementi che rappresentano le nuove camere singole doppie e triple disponibili per la data indicata da date.
       modifyRow: (date,modifica) =>{
         for (let i =0 ; i<data.length;i++){
           if(date===data[i][0]){
