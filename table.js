@@ -17,8 +17,11 @@ const createTable = (parentElement) => {
       },
       addRow: (dataInput)=>{
         data.push(dataInput);
+      },
+      viewtable: ()=>{
+        console.log(data);
       }
     }
-  }
+  }//ciao
   
   
