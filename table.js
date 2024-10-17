@@ -4,6 +4,10 @@ const createTable = (parentElement) => {
       build: (dataInput) => {
         data = dataInput;
       },
+      //modifica
+      add: (reservation)=> {
+//conntrollo per vedere se la prenotazione è valida
+      },
       render: () => {
         let htmlTable = "<table>";
         htmlTable += data.map((row) => 
