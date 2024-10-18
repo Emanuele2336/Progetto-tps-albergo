@@ -18,10 +18,10 @@ const getDataFromForm =()=>{
         let singola=s.value;
         let doppia=d.value;
         let suite=su.value;
-        data = data.replace("/","");
+        let datac = data.replace("/","");
         for (let i =0 ; i<table.getData().length;i++){
         //console.log(typeof(data)+" // "+typeof(table.getData()[i][0]))
-        if(parseInt(data)==parseInt(table.getData()[i][0].replace("/",""))){
+        if(parseInt(datac)==parseInt(table.getData()[i][0].replace("/",""))){
         let temp=[];
         let a= parseInt(table.getData()[i][1])-parseInt(singola);
         temp.push(a);
@@ -30,18 +30,24 @@ const getDataFromForm =()=>{
         let c= parseInt(table.getData()[i][3])-parseInt(suite);
         temp.push(c);
          if(a >= 0 && b >= 0 && c >= 0){
-            console.log("pdpdpd");
-            table.modifyRow(data.value,temp);
+            console.log(data+" "+temp)
+            table.modifyRow(data,temp);
             table.render();
             console.log("dopo:");
             table.viewtable();
+         }else{
+            alert("non ci sono abbastanza camere disonibili")
          }
         }
      }
      
      
 
-     table.render();
+     d.value="";
+     s.value="";
+     su.value="";
+     da.value="";
+
 }
 
 
