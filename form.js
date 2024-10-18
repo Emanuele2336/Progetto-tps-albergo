@@ -10,7 +10,8 @@ const createForm = (parentElement) => {
               return `<div>${name}\n<input id="${name}" type="text" /></div>`;
             }).join('\n')
             + "<button type='button' id='submit'>Submit</button>";  
-        document.querySelector("#submit").onclick = () => {
+        let a = document.querySelector("#submit")
+        a.onclick = () => {
           const result = data.map((name) => {
             return document.querySelector("#" + name).value;
           });

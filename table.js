@@ -30,6 +30,9 @@ const createTable = (parentElement) => {
             data[i]=temp;
           }
         }
+      }, 
+      getData: ()=>{
+        return data;
       }
     }
   }//ciao
