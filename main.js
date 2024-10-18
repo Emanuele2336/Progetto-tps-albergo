@@ -7,6 +7,7 @@ form.setLabels(["Data", "Singola", "Doppia","Suite"]);
 form.render();
 filltable();
 //table.modifyRow("2/03/2025",[3,3,3])
+//console.log("1 "+typeof("2/03/2025")+" "+typeof([3,3,3]))
 //table.viewtable();
 table.render();
 form.onsubmit(getDataFromForm);

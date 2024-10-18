@@ -28,6 +28,7 @@ const createTable = (parentElement) => {
             let temp=[];
             temp = [date,modifica[0],modifica[1],modifica[2]];
             data[i]=temp;
+            console.log("modifica effettuata")
           }
         }
       }, 

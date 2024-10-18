@@ -6,47 +6,50 @@ const filltable=()=>{
         table.addRow(list);
     }
 }
+const getDataFromForm =()=>{
+        console.log("prima")
+        table.viewtable();
+        let da= document.querySelector("#Data");
+        let s= document.querySelector("#Singola");
+        let d= document.querySelector("#Doppia");
+        let su= document.querySelector("#Suite");
+     
+        let data=da.value;
+        let singola=s.value;
+        let doppia=d.value;
+        let suite=su.value;
+        let datac = data.replace("/","");
+        for (let i =0 ; i<table.getData().length;i++){
+        //console.log(typeof(data)+" // "+typeof(table.getData()[i][0]))
+        if(parseInt(datac)===parseInt(table.getData()[i][0].replace("/",""))){
+        let temp=[];
+        let a= parseInt(table.getData()[i][1])-parseInt(singola);
+        let b= parseInt(table.getData()[i][2])-parseInt(doppia);
+        let c= parseInt(table.getData()[i][3])-parseInt(suite);
+        temp.push(a,b,c);
+         if(a >= 0 && b >= 0 && c >= 0){
+            console.log(data+" "+temp)
+            table.modifyRow(data,temp);
+            table.render();
+            console.log("dopo:");
+            table.viewtable();
+         }else{
+            alert("non ci sono abbastanza camere disponibili");
+         }
+        }
+     }
+     
+     /*
+        Salvare le disponibilità (per data) su cache remota. Usare un solo oggetto dizionario per tutte le date e salvarlo in remoto con una chiave opportuna.
+     */
 
+     d.value="";
+     s.value="";
+     su.value="";
+     da.value="";
 
-/*form.onsubmit=()=>{
-   let da= document.querySelectorAll("#Data");
-   let s= document.querySelectorAll("#Singola");
-   let d= document.querySelectorAll("#Doppia");
-   let su= document.querySelectorAll("#Suite");
-
-   let data=da.value;
-   let singola=s.value;
-   let doppia=doppia.value;
-   let suite=su.value;
-
-   for (let i =0 ; i<data.length;i++){
-   if(date===data[i][0]){
-   let a= data[i][1]-parseInt(singola);
-   let b= data[i][2]-parseInt(doppia);
-   let c= data[i][3]-parseInt(suite);
-    if(a >= 0 && b >= 0 && c >= 0){
-        modifytable(data,[a,b,c]);
-    }
-   }
 }
-};*/
-
-const getDataFromForm=()=>{
-    const dataFF=document.getElementById("Data");
-    const singola=document.getElementById("Singola");
-    const doppia=document.getElementById("Doppia");
-    const suite=document.getElementById("Suite");
-
-    let dataVal=dataFF.value;
-    let sinVal=singola.value;
-    let doppVal=doppia.value;
-    let suiteVal=suite.value;
-
-    for(let i=0;i<dataFF.length;i++){
-        
-
-    }
 
 
 
-}
+
