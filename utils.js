@@ -20,12 +20,12 @@ form.onsubmit(()=>{
    let suite=su.value;
 
    for (let i =0 ; i<data.length;i++){
-    if(date===data[i][0]){
-        let a= data[i][1]-parseInt(singola);
-        let b= data[i][2]-parseInt(doppia);
-        let c= data[i][3]-parseInt(suite);
+   if(date===data[i][0]){
+   let a= data[i][1]-parseInt(singola);
+   let b= data[i][2]-parseInt(doppia);
+   let c= data[i][3]-parseInt(suite);
     if(a >= 0 && b >= 0 && c >= 0){
-        modifytable(data,[a,b,c]);
+modifytable(data,[a,b,c]);
     }
    }
 }
