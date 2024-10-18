@@ -9,4 +9,4 @@ filltable();
 //table.modifyRow("2/03/2025",[3,3,3])
 //table.viewtable();
 table.render();
-form.onsubmit(getDataFromForm());
+form.onsubmit(getDataFromForm);

@@ -8,7 +8,7 @@ const filltable=()=>{
 }
 
 
-form.onsubmit(()=>{
+/*form.onsubmit=()=>{
    let da= document.querySelectorAll("#Data");
    let s= document.querySelectorAll("#Singola");
    let d= document.querySelectorAll("#Doppia");
@@ -25,8 +25,28 @@ form.onsubmit(()=>{
    let b= data[i][2]-parseInt(doppia);
    let c= data[i][3]-parseInt(suite);
     if(a >= 0 && b >= 0 && c >= 0){
-modifytable(data,[a,b,c]);
+        modifytable(data,[a,b,c]);
     }
    }
 }
-});
+};*/
+
+const getDataFromForm=()=>{
+    const dataFF=document.getElementById("Data");
+    const singola=document.getElementById("Singola");
+    const doppia=document.getElementById("Doppia");
+    const suite=document.getElementById("Suite");
+
+    let dataVal=dataFF.value;
+    let sinVal=singola.value;
+    let doppVal=doppia.value;
+    let suiteVal=suite.value;
+
+    for(let i=0;i<dataFF.length;i++){
+        
+
+    }
+
+
+
+}
