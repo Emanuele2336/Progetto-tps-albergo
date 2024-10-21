@@ -5,5 +5,6 @@ table.render();
 form.setLabels(["Data", "Singola", "Doppia","Suite"]);
 form.render();
 filltable();
+f();
 table.viewtable();
 table.render();
