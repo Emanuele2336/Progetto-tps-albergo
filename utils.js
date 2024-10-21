@@ -1,7 +1,8 @@
 const filltable=()=>{
-    for(let i=1;i<32;i++){
+   let data=new Date();
+    for(let i=0;i<30;i++){
         let n=i;
-        let s=n+"/03/2025";
+        let s=new Date (new Date().setDate(data.getDate()+i)).toLocaleDateString();
         let list=[s,"10","5","3"];
         table.addRow(list);
     }
@@ -42,6 +43,10 @@ const getDataFromForm =()=>{
      /*
         Salvare le disponibilità (per data) su cache remota. Usare un solo oggetto dizionario per tutte le date e salvarlo in remoto con una chiave opportuna.
      */
+      
+
+
+
 
      d.value="";
      s.value="";
@@ -50,6 +55,54 @@ const getDataFromForm =()=>{
 
 }
 
+
+
+const zozzoneSET=()=>{
+   const myToken="67fea5bf-6439-4377-bf9b-65f43a7459e9";
+   let myJSONObject=JSON.stringify(table.getData());
+   let myKey="chiave";
+   fetch("https://ws.progettimolinari.it/cache/set", {
+      method: "POST",
+      headers: {
+          "content-type": "application/json",
+          "key": myToken
+      },
+      body: JSON.stringify({
+          key: myKey,
+          value: myJSONObject
+      })
+  })
+      .then(r => r.json())
+      .then(r => {
+          console.log("fattooooooo"); 
+          console.log(r.result); 
+      })
+
+}
+
+
+/*
+const zozzoneGET=()=>{
+   const myToken="67fea5bf-6439-4377-bf9b-65f43a7459e9";
+   let myKey="chiave";
+   fetch("https://ws.progettimolinari.it/cache/get", {
+      method: "POST",
+      headers: {
+          "content-type": "application/json",
+          "key": myToken
+      },
+      body: JSON.stringify({
+          key: myKey
+      })
+  })
+      .then(r => r.json())
+      .then(r => {
+          myObject1 = JSON.parse(r.result);
+          r.innerText=myObject1.dato;
+          console.log(myObject1); 
+  })
+}
+*/
 
 
 
