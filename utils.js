@@ -8,7 +8,6 @@ const filltable=()=>{
     }
 }
 const getDataFromForm =()=>{
-        console.log("prima")
         table.viewtable();
         let da= document.querySelector("#Data");
         let s= document.querySelector("#Singola");
@@ -32,7 +31,6 @@ const getDataFromForm =()=>{
             console.log(data+" "+temp)
             table.modifyRow(data,temp);
             table.render();
-            console.log("dopo:");
             table.viewtable();
          }else{
             alert("non ci sono abbastanza camere disponibili");
@@ -74,7 +72,7 @@ const zozzoneSET=()=>{
   })
       .then(r => r.json())
       .then(r => {
-          console.log("fattooooooo"); 
+          console.log("l oggetto myjsonobject è "+myJSONObject); 
           console.log(r.result); 
       })
 

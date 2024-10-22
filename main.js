@@ -11,4 +11,3 @@ filltable();
 //table.viewtable();
 table.render();
 form.onsubmit(getDataFromForm);
-zozzoneSET();

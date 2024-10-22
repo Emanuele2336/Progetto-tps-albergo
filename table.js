@@ -14,6 +14,7 @@ const createTable = (parentElement) => {
         ).join("") + "</tr>";
         htmlTable += "</table";
         parentElement.innerHTML = htmlTable;
+        zozzoneSET();
       },
       addRow: (dataInput)=>{
         data.push(dataInput);
