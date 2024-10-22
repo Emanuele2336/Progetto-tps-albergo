@@ -72,14 +72,13 @@ const zozzoneSET=()=>{
   })
       .then(r => r.json())
       .then(r => {
-          console.log("l oggetto myjsonobject è "+myJSONObject); 
-          console.log(r.result); 
+          console.log("l oggetto myjsonobject è "+ myJSONObject);
       })
 
 }
 
 
-/*
+
 const zozzoneGET=()=>{
    const myToken="67fea5bf-6439-4377-bf9b-65f43a7459e9";
    let myKey="chiave";
@@ -100,7 +99,7 @@ const zozzoneGET=()=>{
           console.log(myObject1); 
   })
 }
-*/
+
 
 
 
