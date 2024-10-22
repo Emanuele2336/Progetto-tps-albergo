@@ -58,10 +58,10 @@ const getDataFromForm =()=>{
 
 
 const zozzoneSET=()=>{
-   const myToken="67fea5bf-6439-4377-bf9b-65f43a7459e9";
+   const myToken="06beb74c-e6b8-4062-a1b7-6d394f35eb44";
    let myJSONObject=JSON.stringify(table.getData());
    let myKey="chiave";
-   fetch("https://ws.progettimolinari.it/cache/set", {
+   fetch(" ws.cipiaceinfo.it/set", {
       method: "POST",
       headers: {
           "content-type": "application/json",
@@ -81,11 +81,11 @@ const zozzoneSET=()=>{
 }
 
 
-/*
+
 const zozzoneGET=()=>{
-   const myToken="67fea5bf-6439-4377-bf9b-65f43a7459e9";
+   const myToken="06beb74c-e6b8-4062-a1b7-6d394f35eb44";
    let myKey="chiave";
-   fetch("https://ws.progettimolinari.it/cache/get", {
+   fetch(" ws.cipiaceinfo.it/get", {
       method: "POST",
       headers: {
           "content-type": "application/json",
@@ -102,7 +102,7 @@ const zozzoneGET=()=>{
           console.log(myObject1); 
   })
 }
-*/
+
 
 
 
