@@ -32,6 +32,7 @@ const getDataFromForm =()=>{
             table.modifyRow(data,temp);
             table.render();
             table.viewtable();
+            //set();
          }else{
             alert("non ci sono abbastanza camere disponibili");
          }
@@ -55,11 +56,11 @@ const getDataFromForm =()=>{
 
 
 
-const zozzoneSET=()=>{
+const set=()=>{
    const myToken="67fea5bf-6439-4377-bf9b-65f43a7459e9";
    let myJSONObject=JSON.stringify(table.getData());
    let myKey="chiave";
-   fetch("https://ws.progettimolinari.it/cache/set", {
+   fetch("https://ws.cipiaceinfo.it/cache/set", {
       method: "POST",
       headers: {
           "content-type": "application/json",
@@ -79,10 +80,10 @@ const zozzoneSET=()=>{
 
 
 
-const zozzoneGET=()=>{
+const get=()=>{
    const myToken="67fea5bf-6439-4377-bf9b-65f43a7459e9";
    let myKey="chiave";
-   fetch("https://ws.progettimolinari.it/cache/get", {
+   fetch("https://ws.cipiaceinfo.it/cache/get", {
       method: "POST",
       headers: {
           "content-type": "application/json",

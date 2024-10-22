@@ -13,7 +13,7 @@ const createForm = (parentElement) => {
         let a = document.querySelector("#submit")
         a.onclick = () => {
           const result = data.map((name) => {
-            zozzoneSET();
+            set();
             return document.querySelector("#" + name).value;
           });
           callback(result);

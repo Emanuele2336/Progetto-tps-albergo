@@ -14,13 +14,13 @@ const createTable = (parentElement) => {
         ).join("") + "</tr>";
         htmlTable += "</table";
         parentElement.innerHTML = htmlTable;
-        zozzoneSET();
+        set();
       },
       addRow: (dataInput)=>{
         data.push(dataInput);
       },
       viewtable: ()=>{
-        zozzoneGET();
+        get();
         console.log(data);
       },
       //modifica corrisponde ad un array di 3 elementi che rappresentano le nuove camere singole doppie e triple disponibili per la data indicata da date.
